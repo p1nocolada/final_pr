@@ -96,8 +96,7 @@ def read_parquet():
 with DAG(
     dag_id="read_parquet_dag",
     start_date=datetime(2026, 3, 22),
-    schedule_interval=None,
-    shedule="@hourly",
+    schedule_interval="@hourly",
     catchup=False,
     tags=["spark", "parquet"]
 ) as dag:
